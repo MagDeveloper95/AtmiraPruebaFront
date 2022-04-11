@@ -1,20 +1,21 @@
 
-.stars, .twinkling, .clouds {
-	position:absolute;
-	display:block;
-	top:0; bottom:0;
-	left:0; right:0;
-	width:100%; height:100%;
+.stars, .twinkling {
+	height: 100vh;
+	width: 100vw;
+	top:0; 
+	bottom:0;
+	left:0; 
+	right:0;
 }
 
 .stars {
 	z-index: 0;
-	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat ;
 }
 
 .twinkling{
 	z-index: 1;
-	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
+	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat ;
 	animation: move-twink-back 200s linear infinite;
 }
 

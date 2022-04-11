@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NasaModule } from './nasa/nasa.module';
@@ -12,7 +12,8 @@ import { NasaModule } from './nasa/nasa.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NasaModule
+    NasaModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

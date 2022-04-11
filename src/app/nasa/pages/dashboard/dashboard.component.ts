@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NasaResponse } from '../../interfaces/nasa.interface';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  photosList: NasaResponse[] = [];
+  
   constructor() { }
 
   ngOnInit(): void {

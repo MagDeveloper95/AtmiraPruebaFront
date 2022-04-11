@@ -9,6 +9,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { LogAtmiraComponent } from './components/log-atmira/log-atmira.component';
+import { MaterialModule } from '../material/material/material.module';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { LogAtmiraComponent } from './components/log-atmira/log-atmira.component
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     NasaRoutingModule
   ],
   exports: [ HomePageComponent ]
