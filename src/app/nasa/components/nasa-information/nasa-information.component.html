@@ -1,1 +1,17 @@
-<p>nasa-information works!</p>
+<div class="container">
+  <button mat-flat-button class="back" routerLink=" ">Volver</button>
+  <div class="container-contact ">
+    <div class="row decor-default">
+      <div class="col-md-12">
+        <div class="contact">
+          <div class="controls">
+            <img [src]="photo.photo.url" class="cover" />
+          </div>
+          <p class="contact-description">
+            {{ photo.photo.explanation }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

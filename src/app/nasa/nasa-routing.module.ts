@@ -6,10 +6,9 @@ import { DetailsComponent } from './pages/details/details.component';
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
     children:[
       {path:'dashboard', component: DashboardComponent},
-      {path:'details', component: DetailsComponent },
+      {path:'details', component: DetailsComponent},
       {path:'**', redirectTo:'dashboard'}
     ]
   }

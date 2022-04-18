@@ -1,1 +1,7 @@
-<p>dashboard works!</p>
+<div class="container">
+  <div class="row" style="margin-top: 2%">
+    <div *ngFor="let photo of photosList" class="col-sm-4">
+      <app-nasa-card [photo]="photo"></app-nasa-card>
+    </div>
+  </div>
+</div>
