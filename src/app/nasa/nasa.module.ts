@@ -9,6 +9,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { LogAtmiraComponent } from './components/log-atmira/log-atmira.component';
 import { MaterialModule } from '../material/material.module';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MaterialModule } from '../material/material.module';
     HomePageComponent,
     DashboardComponent,
     DetailsComponent,
-    LogAtmiraComponent
+    LogAtmiraComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
