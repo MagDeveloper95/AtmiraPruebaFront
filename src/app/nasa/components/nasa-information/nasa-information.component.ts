@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
+import { NasaResponse } from '../../interfaces/nasa.interface';
+
 
 @Component({
   selector: 'app-nasa-information',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NasaInformationComponent implements OnInit {
 
+  @Input('photo')photo!: any;
+    
   constructor() { }
-
+  
   ngOnInit(): void {
+    console.log("aqui")
+    console.log(this.photo);
   }
 
 }

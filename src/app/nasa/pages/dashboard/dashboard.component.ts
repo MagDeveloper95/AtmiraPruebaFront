@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NasaResponse } from '../../interfaces/nasa.interface';
+import { NasaService } from '../../services/nasa.service';
+import { UtilsService } from '../../services/utils.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,11 +10,16 @@ import { NasaResponse } from '../../interfaces/nasa.interface';
 })
 export class DashboardComponent implements OnInit {
 
-  photosList: NasaResponse[] = [];
-  
-  constructor() { }
+  photosList: NasaResponse [] = [];
+ 
+  constructor(private nasaS: NasaService) {}
 
   ngOnInit(): void {
+    this.nasaS.getPhotos().subscribe(
+      (data: NasaResponse[]) => {
+        console.log(this.photosList = data);
+      }
+    );
   }
 
 }

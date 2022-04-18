@@ -8,7 +8,8 @@ import { NasaResponse } from '../../interfaces/nasa.interface';
 })
 export class NasaCardComponent implements OnInit {
 
-  @Input('item') photo!: NasaResponse;
+  @Input('photo') photo!: NasaResponse;
+  
   constructor() { }
 
   ngOnInit(): void {

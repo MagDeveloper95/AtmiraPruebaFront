@@ -1,5 +1,7 @@
 <div class="container">
-    <div class="row" style="padding-top:12px">
-        <app-nasa-card class="col-4"></app-nasa-card>
+  <div class="row" style="margin-top: 2%">
+    <div *ngFor="let photo of photosList" class="col-sm-4">
+      <app-nasa-card [photo]="photo"></app-nasa-card>
     </div>
+  </div>
 </div>
