@@ -1,0 +1,11 @@
+  <div class="card text-white">
+	<img [src]="photo.url" class="img-fluid ">
+	<div class="card-img-overlay">
+		<div class="card-background">
+			<h5 class="card-title">{{photo.title}}</h5>
+			<p class="card-text">{{photo.date | date:'fullDate' | titlecase }}</p>
+		</div>
+	  <button mat-raised-button class="buttonPos" routerLink="/nasa/details" [state]="{ photo: {photo}}" >Ver Detalles</button>
+	</div>
+  </div>
+
