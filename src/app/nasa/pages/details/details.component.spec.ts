@@ -4,6 +4,16 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { DetailsComponent } from './details.component';
 import { NasaResponse } from '../../interfaces/nasa.interface';
 
+let photo: NasaResponse = {
+  date: '2022-02-02',
+  explanation: '',
+  hdurl: '',
+  media_type: '',
+  service_version: '',
+  title: '',
+  url: '',
+};
+
 describe('DetailsComponent', () => {
   let component: DetailsComponent;
   let fixture: ComponentFixture<DetailsComponent>;
@@ -32,6 +42,13 @@ describe('DetailsComponent', () => {
   it('DetailsComponent should send data to app-nasa-information', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('app-nasa-information').dataset.photo).toBe(component.photo);
-  });     
+  });
+  it('During ngOnInit photo is equals to history state  ', () => {
+    component.photo = photo;
+    history.pushState(photo, '', '');
+    fixture.detectChanges();
+    component.ngOnInit();
+    expect(history.state).toEqual(photo);    
+  });       
 
 });
