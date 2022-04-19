@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NasaResponse } from '../../interfaces/nasa.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -8,11 +9,13 @@ import { NasaResponse } from '../../interfaces/nasa.interface';
 })
 export class DetailsComponent implements OnInit {
 
-  photo: NasaResponse = history.state.photo;
-    
-  constructor() { }
-  
+  photo!: NasaResponse | undefined;;
+
+  constructor(private routerNav: Router) {}
+
   ngOnInit(): void {
-    if(!this.photo) history.back();
+    (history.state && history.state.title)? this.photo = history.state  : this.photo == undefined;
+    if(!this.photo) this.routerNav.navigate(['/']);
   }
+  
 }

@@ -1,14 +1,14 @@
 <div class="container">
   <button mat-flat-button class="back" routerLink=" ">Volver</button>
-  <div class="container-contact ">
+  <div class="container-contact" *ngIf="photo"> 
     <div class="row decor-default">
       <div class="col-md-12">
-        <div class="contact" *ngIf="photo">
+        <div class="contact">
           <div class="controls">
-            <img [src]="photo.url" class="cover animate__animated animate__slow animate__fadeInUp" />
+            <img [src]="photo!.url" class="cover animate__animated animate__slow animate__fadeInUp" />
           </div>
           <p class="contact-description">
-            {{ photo.explanation }}
+            {{ photo!.explanation }}
           </p>
         </div>
       </div>

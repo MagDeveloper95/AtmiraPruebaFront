@@ -12,10 +12,10 @@ export class NasaInformationComponent implements OnInit {
 
   @Input('photo')photo!: NasaResponse;
     
-  constructor(private routerM: Router) { }
+  constructor(private routerNav: Router) { }
 
-  ngOnInit(): void {
-    if(!this.photo) this.routerM.navigate(['/']);
+  ngOnInit(): void {    
+    if(!this.photo) this.routerNav.navigate(['/']);
   }
 
 }

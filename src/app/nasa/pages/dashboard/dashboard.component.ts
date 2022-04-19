@@ -15,10 +15,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.nasaS.getPhotos().subscribe(
-      (data: NasaResponse[]) => {
-        if(data.length < 0) return ;
-        this.photosList = data;
-      }
-    );
+      (data: NasaResponse[])=> this.photosList = data);    
   }
 }

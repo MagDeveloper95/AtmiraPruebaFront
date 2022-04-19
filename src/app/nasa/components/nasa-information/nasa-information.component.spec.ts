@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NasaInformationComponent } from './nasa-information.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NasaInformationComponent', () => {
   let component: NasaInformationComponent;
@@ -7,7 +8,8 @@ describe('NasaInformationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NasaInformationComponent ]
+      declarations: [ NasaInformationComponent ],
+      imports:[RouterTestingModule]
     })
     .compileComponents();
   });
@@ -17,7 +19,6 @@ describe('NasaInformationComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });

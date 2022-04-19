@@ -19,13 +19,17 @@ describe('HomePageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('HomePageComponent should be create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render router-outlet', () => {
+  it('HomePageComponent should render router-outlet', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
+  });
+  it('HomePageComponent should render app-log-atmira', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-log-atmira')).toBeTruthy();
   });
   
 });

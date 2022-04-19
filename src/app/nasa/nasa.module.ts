@@ -20,6 +20,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     DetailsComponent,
     LogAtmiraComponent,
     LoadingComponent
+    
   ],
   imports: [
     CommonModule,
