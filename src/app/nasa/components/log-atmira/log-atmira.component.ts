@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-log-atmira',
   templateUrl: './log-atmira.component.html',
   styleUrls: ['./log-atmira.component.css']
 })
-export class LogAtmiraComponent implements OnInit {
+export class LogAtmiraComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

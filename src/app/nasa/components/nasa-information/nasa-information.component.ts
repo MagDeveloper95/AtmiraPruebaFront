@@ -1,4 +1,5 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NasaResponse } from '../../interfaces/nasa.interface';
 
 
@@ -9,13 +10,12 @@ import { NasaResponse } from '../../interfaces/nasa.interface';
 })
 export class NasaInformationComponent implements OnInit {
 
-  @Input('photo')photo!: any;
+  @Input('photo')photo!: NasaResponse;
     
-  constructor() { }
-  
+  constructor(private routerM: Router) { }
+
   ngOnInit(): void {
-    console.log("aqui")
-    console.log(this.photo);
+    if(!this.photo) this.routerM.navigate(['/']);
   }
 
 }

@@ -17,6 +17,7 @@ export class UtilsService {
       this._listDays.push(formatDate(day, 'yyyy-MM-dd', 'en')); 
     });
   } 
+  
   get formatedDates() {
     this.getDaysPeriod();
     const firstDay = this._listDays[0];

@@ -13,7 +13,6 @@ export class DetailsComponent implements OnInit {
   constructor() { }
   
   ngOnInit(): void {
-    this.photo = history.state.photo;
-    console.log(this.photo);
+    if(!this.photo) history.back();
   }
 }

@@ -3,12 +3,12 @@
   <div class="container-contact ">
     <div class="row decor-default">
       <div class="col-md-12">
-        <div class="contact">
+        <div class="contact" *ngIf="photo">
           <div class="controls">
-            <img [src]="photo.photo.url" class="cover" />
+            <img [src]="photo.url" class="cover" />
           </div>
           <p class="contact-description">
-            {{ photo.photo.explanation }}
+            {{ photo.explanation }}
           </p>
         </div>
       </div>

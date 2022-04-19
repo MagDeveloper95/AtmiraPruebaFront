@@ -1,8 +1,15 @@
-<div class="container">
-  <div class="row" style="margin-top: 2%">
-    <app-loading></app-loading>
-    <div *ngFor="let photo of photosList" class="col-sm-4">
-      <app-nasa-card [photo]="photo"></app-nasa-card>
+<mat-grid-list cols="1" *ngIf="photosList.length == 0 ; else divCard">
+  <mat-grid-tile>
+     <app-loading class="loading"></app-loading>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divCard> 
+    <div class="row" style="margin-top: 2%">
+      <div *ngFor="let photo of photosList" class="col-sm-4">
+        <app-nasa-card [photo]="photo"></app-nasa-card>
+      </div>
     </div>
-  </div>
-</div>
+</ng-template>
+
+

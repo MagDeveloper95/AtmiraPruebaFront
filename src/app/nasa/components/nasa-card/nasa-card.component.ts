@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NasaResponse } from '../../interfaces/nasa.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nasa-card',
@@ -10,9 +11,9 @@ export class NasaCardComponent implements OnInit {
 
   @Input('photo') photo!: NasaResponse;
   
-  constructor() { }
+  constructor(private routerM : Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
+    if(!this.photo) this.routerM.navigate(['']); 
   }
-
 }
