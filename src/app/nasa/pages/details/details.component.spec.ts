@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-
 import { DetailsComponent } from './details.component';
 import { NasaResponse } from '../../interfaces/nasa.interface';
 
@@ -43,7 +42,7 @@ describe('DetailsComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('app-nasa-information').dataset.photo).toBe(component.photo);
   });
-  it('During ngOnInit photo is equals to history state  ', () => {
+  it('During ngOnInit photo is equals to history state', () => {
     component.photo = photo;
     history.pushState(photo, '', '');
     fixture.detectChanges();
