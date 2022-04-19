@@ -11,7 +11,7 @@ export class UtilsService {
   getDaysPeriod() {
     const now = new Date();
     const length = 6;
-    const days = Array.from({ length }, (_, days) => {
+    Array.from({ length }, (_, days) => {
       let day = new Date(now) 
       day.setDate(now.getDate() - days) 
       this._listDays.push(formatDate(day, 'yyyy-MM-dd', 'en')); 

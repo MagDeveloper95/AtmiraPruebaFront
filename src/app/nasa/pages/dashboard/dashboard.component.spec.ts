@@ -59,7 +59,7 @@ beforeEach(async () => {
     const nasaS = fixture.debugElement.injector.get(NasaService);
     const spy = spyOn(nasaS, 'getPhotos').and.returnValue(of(photosList));
     component.ngOnInit();
-    expect(spy).toHaveBeenCalled();
+    expect(spy).toHaveBeenCalled(); 
     expect(component.photosList.length).toBe(2);
   });
 });
